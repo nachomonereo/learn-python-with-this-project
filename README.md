@@ -8,11 +8,11 @@ This repo is designed for the preparation of MRAC students as they are entering 
 
 ## Resources
 
-# Debugging Tips for Python and OpenCV Projects
+## Debugging Tips for Python and OpenCV Projects
 
 Here are some practical debugging tips for students tackling Python and OpenCV projects:
 
-## General Python Debugging Tips
+### General Python Debugging Tips
 
 1. **Understand the Error Message**:
    - Read error messages carefully; they often indicate the exact problem (e.g., syntax errors, missing libraries, or type mismatches).
