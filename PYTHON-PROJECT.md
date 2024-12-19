@@ -1,3 +1,5 @@
+Author: [Marita Georganta](https://github.com/maritaganta)
+
 # Building Material Cost Estimator
 
 This project serves as an opportunity for students with architectural background to learn Python. It assumes that the student is an absolute beginner and is used to teach the fundamental conecpts of Python through a hands on approach.
