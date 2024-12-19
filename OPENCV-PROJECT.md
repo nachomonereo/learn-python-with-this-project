@@ -1,3 +1,5 @@
+Author: [Marita Georganta](https://github.com/maritaganta)
+
 # Blueprint Analyzer with OpenCV
 
 This project introduces architecture students to the basics of OpenCV through a practical exercise in image processing. The program processes blueprint images, highlights walls and room boundaries, and calculates areas of detected rooms. It’s designed for beginners to learn Python and OpenCV while applying programming skills to an architecture-related task.
