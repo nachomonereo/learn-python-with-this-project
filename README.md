@@ -1,3 +1,5 @@
+Author: [Marita Georganta](https://github.com/maritaganta)
+
 # Learn Python and OpenCV through hands on projects
 
 This repo is used for IAAC students and faculty to learn Python and OpenCV through projects. Navigate to either the `PYTHON-PROJECT.md` or the `OPENCV-PROJECT.md` to get started. 
@@ -7,10 +9,8 @@ The concepts and tools learned through the hands on work you put buidling these 
 This repo is designed for the preparation of MRAC students as they are entering the second term of the MRAC programme which is dedicated to *sensing*.
 
 ## Resources
-
-## Debugging Tips for Python and OpenCV Projects
-
-Here are some practical debugging tips for students tackling Python and OpenCV projects:
+* [Python Tutorial]([https://link-url-here.org](https://www.w3schools.com/python/python_intro.asp)) - from intro to functions; use the playground provided
+* [OpenCV Tutorial]([https://link-url-here.org](https://www.kaggle.com/code/talhabu/opencv-tutorial-from-basic-to-advanced))
 
 ### General Python Debugging Tips
 
