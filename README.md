@@ -9,8 +9,8 @@ The concepts and tools learned through the hands on work you put buidling these 
 This repo is designed for the preparation of MRAC students as they are entering the second term of the MRAC programme which is dedicated to *sensing*.
 
 ## Resources
-* [Python Tutorial]([https://link-url-here.org](https://www.w3schools.com/python/python_intro.asp)) - from intro to functions; use the playground provided
-* [OpenCV Tutorial]([https://link-url-here.org](https://www.kaggle.com/code/talhabu/opencv-tutorial-from-basic-to-advanced))
+* [Python Tutorial](https://www.w3schools.com/python/python_intro.asp) - from intro to functions; use the playground provided
+* [OpenCV Tutorial](https://www.kaggle.com/code/talhabu/opencv-tutorial-from-basic-to-advanced)
 
 ### General Python Debugging Tips
 
