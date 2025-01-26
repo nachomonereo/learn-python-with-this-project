@@ -94,8 +94,8 @@ Ensure you have the necessary dependencies installed before running the scripts:
 
 This repository was originally created by:
 
-Author: [Marita Georganta]
-Updated and maintained by: [nachomonereo]
+Author: [Marita Georganta](https://github.com/maritaganta)
+Updated and maintained by: [nachomonereo](https://github.com/nachomonereo)
 
 This project is part of the IAAC curriculum to prepare MRAC students for their second term, which focuses on sensing.
 
@@ -103,8 +103,8 @@ This project is part of the IAAC curriculum to prepare MRAC students for their s
 
 ### 📚 Additional Resources
 
-- [Python Tutorial] - Learn Python basics and explore hands-on examples.
-- [OpenCV Tutorial] - Comprehensive guide to OpenCV, from basics to advanced techniques.
+- [Python Tutorial](https://www.w3schools.com/python/python_intro.asp) - Learn Python basics and explore hands-on examples.
+- [OpenCV Tutorial](https://www.kaggle.com/code/talhabu/opencv-tutorial-from-basic-to-advanced)- Comprehensive guide to OpenCV, from basics to advanced techniques.
 
 ### 🎓 Project Submission Information
 
