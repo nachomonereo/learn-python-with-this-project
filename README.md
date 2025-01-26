@@ -94,14 +94,23 @@ Ensure you have the necessary dependencies installed before running the scripts:
 
 This repository was originally created by:
 
-Author: [Marita Georganta](https://github.com/maritaganta)
+Author: [Marita Georganta]
 Updated and maintained by: [nachomonereo]
 
 This project is part of the IAAC curriculum to prepare MRAC students for their second term, which focuses on sensing.
-📚 Additional Resources
 
-    Python Tutorial - Learn Python basics and explore hands-on examples.
-    OpenCV Tutorial - Comprehensive guide to OpenCV, from basics to advanced techniques.
+
+
+### 📚 Additional Resources
+
+- [Python Tutorial] - Learn Python basics and explore hands-on examples.
+- [OpenCV Tutorial] - Comprehensive guide to OpenCV, from basics to advanced techniques.
+
+### 🎓 Project Submission Information
+
+This repository has been modified and submitted as part of the Master in Robotics and Advanced Construction (MRAC) program at the Institute for Advanced Architecture of Catalonia (IAAC).
+
+The project aims to demonstrate the application of Python and OpenCV skills acquired during the course, focusing on automation and digital fabrication processes.
 
 Thank you for exploring these projects! 🚀
 
