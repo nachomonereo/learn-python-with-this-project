@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
-import matplotlib.pyplot as plt
 import pandas as pd
+import matplotlib.pyplot as plt
 import os
 
 def load_image():
@@ -10,7 +10,7 @@ def load_image():
     """
     while True:
         image_path = input("Enter the path to the Mondrian image (PNG/JPG): ").strip()
-        
+
         if not os.path.isfile(image_path):
             print("Error: The file does not exist. Please try again.")
             continue
@@ -23,7 +23,7 @@ def load_image():
             image = cv2.imread(image_path)
             if image is None:
                 raise ValueError("Error: Unable to load image. Ensure the file is a valid PNG/JPG.")
-            return image, cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+            return image, cv2.cvtColor(image, cv2.COLOR_BGR2HSV), image_path
         except Exception as e:
             print(f"Unexpected error: {e}")
             continue
@@ -38,6 +38,13 @@ def process_color(lower, upper, hsv_image):
     blurred = cv2.GaussianBlur(mask, (5, 5), 0)
     edges = cv2.Canny(blurred, 50, 150)
     return mask, edges
+
+def show_image(image, title="Image"):
+    """ Display image using matplotlib to avoid OpenCV GUI issues """
+    plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+    plt.title(title)
+    plt.axis('off')
+    plt.show()
 
 def analyze_colors(image, hsv_image):
     """
@@ -74,13 +81,10 @@ def analyze_colors(image, hsv_image):
 
         for contour in contours:
             x, y, w, h = cv2.boundingRect(contour)
-            cv2.rectangle(output_image, (x, y), (x+w, y+h), (0, 255, 0), 1)
+            cv2.rectangle(output_image, (x, y), (x+w, y+h), (0, 255, 0), 2)
 
-        plt.figure(figsize=(5, 5))
-        plt.imshow(cv2.cvtColor(cv2.bitwise_and(image, image, mask=mask), cv2.COLOR_BGR2RGB))
-        plt.title(f'{color}: {num_pixels} px, {len(contours)} contours')
-        plt.axis('off')
-        plt.show()
+        # Show the processed image using matplotlib
+        show_image(cv2.bitwise_and(image, image, mask=mask), f'{color}: {num_pixels} px, {len(contours)} contours')
 
     return output_image, results
 
@@ -93,27 +97,35 @@ def save_results_to_excel(results, output_file="color_analysis.xlsx"):
     print(f"Results saved to {output_file}")
 
 def main():
-    print("Welcome to the Mondrian Color Analyzer!")
-    
-    try:
-        image, hsv_image = load_image()
+    while True:
+        print("\nWelcome to the Mondrian Color Analyzer!")
+
+        image, hsv_image, image_path = load_image()
         analyzed_image, results = analyze_colors(image, hsv_image)
 
-        cv2.imwrite("processed_mondrian.png", analyzed_image)
-        print("Processed image saved as 'processed_mondrian.png'")
+        output_path = "processed_" + os.path.basename(image_path)
+        cv2.imwrite(output_path, analyzed_image)
+        print(f"Processed image saved as '{output_path}'")
 
-        save_results_to_excel(results)
+        while True:
+            choice = input("\nDo you want to (S)ave the results or (R)estart the analysis? (S/R): ").strip().lower()
 
-        plt.figure(figsize=(8, 8))
-        plt.imshow(cv2.cvtColor(analyzed_image, cv2.COLOR_BGR2RGB))
-        plt.title('Mondrian Analysis')
-        plt.axis('off')
-        plt.show()
+            if choice == 's':
+                save_results_to_excel(results)
+                print("Results saved successfully!")
+                break
+            elif choice == 'r':
+                print("Restarting the analysis...")
+                break
+            else:
+                print("Invalid choice. Please enter 'S' to save or 'R' to restart.")
 
-    except Exception as e:
-        print(f"Error occurred: {e}")
+        # Ask if the user wants to run another analysis
+        again = input("\nDo you want to analyze another image? (yes/no): ").strip().lower()
+        if again != 'yes':
+            print("Thank you for using the Mondrian Analyzer! Goodbye.")
+            break
 
 if __name__ == "__main__":
     main()
-
 
