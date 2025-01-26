@@ -1,29 +1,63 @@
 Author: [Marita Georganta](https://github.com/maritaganta)
 
-# Learn Python and OpenCV through hands on projects
 
-This repo is used for IAAC students and faculty to learn Python and OpenCV through projects. Navigate to either the `PYTHON-PROJECT.md` or the `OPENCV-PROJECT.md` to get started. 
+# Learn Python and OpenCV through Hands-On Projects
 
-The concepts and tools learned through the hands on work you put buidling these projects are fundamental for future python and opencv development.
+This repository serves as a resource for IAAC students and faculty to enhance their skills in **Python** and **OpenCV** through practical projects. The goal is to build real-world applications while reinforcing fundamental concepts of programming and image processing.
 
-This repo is designed for the preparation of MRAC students as they are entering the second term of the MRAC programme which is dedicated to *sensing*.
+## 📂 Projects in the Repository
 
-## Resources
-* [Python Tutorial](https://www.w3schools.com/python/python_intro.asp) - from intro to functions; use the playground provided
-* [OpenCV Tutorial](https://www.kaggle.com/code/talhabu/opencv-tutorial-from-basic-to-advanced)
+### 1. 🖼️ Mondrian Analyzer
 
-### General Python Debugging Tips
+The **Mondrian Analyzer** is a Python-based tool designed to analyze images inspired by the art of Piet Mondrian. It leverages the power of **OpenCV** to detect and analyze primary colors in an image, calculate pixel coverage, and visualize detected regions.
 
-1. **Understand the Error Message**:
-   - Read error messages carefully; they often indicate the exact problem (e.g., syntax errors, missing libraries, or type mismatches).
-   - Use the stack trace to locate the line of code causing the error.
-   - Copy and paste the error onto google; many times the answer can be found immediately.
+#### **Key Features:**
+- Load images in PNG or JPG format.
+- Detect and analyze primary colors: **red, blue, yellow, black, and white**.
+- Count the number of pixels occupied by each color.
+- Identify contours and visualize the detected shapes.
+- Export analysis results to an Excel file (`color_analysis.xlsx`).
+- Display processed images using **Matplotlib**.
 
-2. **Print Statements**:
-   - Use `print()` statements to display the values of variables at different stages of the program to understand what's happening.
+#### **Usage Instructions:**
+1. Run the script using:
 
-3. **Check Inputs**:
-   - Verify that inputs (e.g., file paths, numbers) are correct and in the expected format.
+   ```bash
+   python mondrian_analyzer.py
+   
+- Provide the path to the Mondrian-style image when prompted.
+- Choose to save the results or restart the analysis.
+- Processed images will be saved as processed_<original_image>.png.
 
-4. **Break Down the Problem**:
-   - Test small sections of the code in isolation to ensure they work before integrating them into the larger program.
+
+### 2.Material Cost Estimator
+
+The **Material Cost Estimator** is a simple Python-based tool that helps estimate construction costs by calculating the total cost of materials required for a project.
+
+#### **Key Features:**
+
+- Input room dimensions (length and width).
+- Choose from available materials such as wood, concrete, brick, and tiles, with associated costs per square foot.
+- Automatic calculation of total material cost.
+- Option to save the estimate to an Excel file for future reference.
+
+### ⚙️ Installation Instructions
+
+Ensure you have the necessary dependencies installed before running the scripts:
+	pip install opencv-python numpy pandas matplotlib openpyxl
+	
+### 📝 Acknowledgment
+
+This repository was originally created by:
+
+Author: [Marita Georganta](https://github.com/maritaganta)
+Updated and maintained by: [nachomonereo]
+
+This project is part of the IAAC curriculum to prepare MRAC students for their second term, which focuses on sensing.
+📚 Additional Resources
+
+    Python Tutorial - Learn Python basics and explore hands-on examples.
+    OpenCV Tutorial - Comprehensive guide to OpenCV, from basics to advanced techniques.
+
+Thank you for exploring these projects! 🚀
+
