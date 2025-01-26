@@ -13,11 +13,11 @@ The **Mondrian Analyzer** is a Python-based tool designed to analyze images insp
 
 #### **Key Features:**
 - Load images in PNG or JPG format.
-- Detect and analyze primary colors: **red, blue, yellow, black, and white**.
-- Count the number of pixels occupied by each color.
-- Identify contours and visualize the detected shapes.
-- Export analysis results to an Excel file (`color_analysis.xlsx`).
-- Display processed images using **Matplotlib**.
+- Detect and analyze primary colors: red, blue, yellow, black, and white.
+- Calculate pixel count for each detected color.
+- Identify contours and visualize detected areas.
+- Save results in an Excel file (color_analysis.xlsx).
+- Interactive user experience with options to save or restart analysis.
 
 #### **Usage Instructions:**
 1. Run the script using:
@@ -25,9 +25,22 @@ The **Mondrian Analyzer** is a Python-based tool designed to analyze images insp
    ```bash
    python mondrian_analyzer.py
    
-- Provide the path to the Mondrian-style image when prompted.
-- Choose to save the results or restart the analysis.
-- Processed images will be saved as processed_<original_image>.png.
+2. Enter the path to the Mondrian-style image when prompted:
+
+   ```bash
+   Enter the path to the Mondrian image (PNG/JPG): mondrian1.png
+   
+3. The program will process the image, calculate areas, and show visual output.
+4. Example output:
+
+   ```bash
+   Yellow: 5230 px, 8 contours
+   Blue: 4320 px, 5 contours
+   Red: 6700 px, 10 contours
+   
+5. The processed image will be displayed and saved as processed_mondrian1.png.
+
+
 
 
 ### 2.Material Cost Estimator
@@ -45,6 +58,37 @@ The **Material Cost Estimator** is a simple Python-based tool that helps estimat
 
 Ensure you have the necessary dependencies installed before running the scripts:
 	pip install opencv-python numpy pandas matplotlib openpyxl
+	
+#### **Usage Instructions:**
+1. Run the script using:
+
+   ```bash
+   python python_building_material_cost_estimator.py
+
+	
+2. Enter the required details when prompted:
+	```bash
+	Enter the length of the room (in feet): 20
+	Enter the width of the room (in feet): 15
+	hoose a material:
+	1. Wood ($8/sq ft)
+	2. Concrete ($12/sq ft)
+	3. Brick ($10/sq ft)
+	4. Tiles ($5/sq ft)
+
+	Enter your choice (1/2/3/4): 2
+
+3.  The tool will calculate and display the total cost:
+
+	```bash
+	The total cost for the selected material is: $3600.00
+
+4. Choose whether to save the results:
+
+	```bash
+	Do you want to save this estimate to a file? (yes/no): yes
+	Project saved successfully!
+
 	
 ### 📝 Acknowledgment
 
